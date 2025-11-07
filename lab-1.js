@@ -17,3 +17,15 @@
 // }
 
 // console.log(calculateTotalCost(10, 10, 10))
+
+function checkEligibility(age, isEmployed){
+    if (age >= 19 && isEmployed === "Employed") {
+        return "Eligible"
+    } else if(age >=19 && isEmployed !== "Employed"){
+        return "Conditionally Eligible"
+    } else if (age <= 18){
+        return "ineligible"
+    }
+}
+
+console.log(checkEligibility(19, "UnEmployed"))
