@@ -18,14 +18,32 @@
 
 // console.log(calculateTotalCost(10, 10, 10))
 
-function checkEligibility(age, isEmployed){
-    if (age >= 19 && isEmployed === "Employed") {
-        return "Eligible"
-    } else if(age >=19 && isEmployed !== "Employed"){
-        return "Conditionally Eligible"
-    } else if (age <= 18){
-        return "ineligible"
+// function checkEligibility(age, isEmployed){
+//     if (age >= 19 && isEmployed === "Employed") {
+//         return "Eligible"
+//     } else if(age >=19 && isEmployed !== "Employed"){
+//         return "Conditionally Eligible"
+//     } else if (age <= 18){
+//         return "ineligible"
+//     }
+// }
+
+// console.log(checkEligibility(19, "UnEmployed"))
+
+function calculateTotalCost(price, quantity, taxRate, discount){
+    // let totalCost = (price * quantity) * (1 + taxRate)
+    if (typeof(price, quantity, taxRate) !== "number") {
+        return "Invalid Input"
+    } else if(discount){
+         return totalCost = ((price * quantity) - discount) * (1 + taxRate)
+    }else {
+        let totalCost = (price * quantity) * (1 + taxRate)
+        return totalCost
     }
 }
-
-console.log(checkEligibility(19, "UnEmployed"))
+// check if number
+// check if discount
+// give total without discount
+console.log(calculateTotalCost(5,5,5,5))
+console.log(calculateTotalCost(5,5,5,))
+console.log(calculateTotalCost(10,10,"ham"))
